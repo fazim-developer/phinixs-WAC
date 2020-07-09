@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -52,8 +56,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "12kb",
+                  "maximumError": "20kb"
                 }
               ]
             }
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "phinixs-WAC"
+    }
+  },
+  "defaultProject": "phinixs-WAC",
+  "cli": {
+    "analytics": "cb4bba61-939a-4a6a-9abe-f06c9a459c32"
+  }
 }

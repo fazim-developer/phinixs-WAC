@@ -1,1 +1,118 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loading {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    filter: url('#goo');
+    animation: rotate-move 2s ease-in-out infinite;
+  }
+  
+  .dot { 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .dot-3 {
+    background-color: #30CFD0;
+    animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+  }
+  
+  .dot-2 {
+    background-color: #7018f4;
+    animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+  }
+  
+  .dot-1 {
+    background-color: #764ba2;
+    animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+  }
+  
+  @keyframes dot-3-move {
+    0% {transform: scale(1)}
+    45% {transform: translateY(-18px) scale(.45)}
+    60% {transform: translateY(-90px) scale(.45)}
+    80% {transform: translateY(-90px) scale(.45)}
+    100% {transform: translateY(0px) scale(1)}
+  }
+  
+  @keyframes dot-2-move {
+    0% {transform: scale(1)}
+    45% {transform: translate(-16px, 12px) scale(.45)}
+    60% {transform: translate(-80px, 60px) scale(.45)}
+    80% {transform: translate(-80px, 60px) scale(.45)}
+    100% {transform: translateY(0px) scale(1)}
+  }
+  
+  @keyframes dot-1-move {
+    0% {transform: scale(1)}
+    45% {transform: translate(16px, 12px) scale(.45)}
+    60% {transform: translate(80px, 60px) scale(.45)}
+    80% {transform: translate(80px, 60px) scale(.45)}
+    100% {transform: translateY(0px) scale(1)}
+  }
+  
+  @keyframes rotate-move {
+    0% {transform: translate(-50%, -50%) rotate(0deg)}
+    55% {transform: translate(-50%, -50%) rotate(180deg)}
+    80% {transform: translate(-50%, -50%) rotate(360deg)}
+    100% {transform: translate(-50%, -50%) rotate(360deg)}
+  }
+  
+  @keyframes index {
+    0%, 100% {z-index: 3}
+    33.3% {z-index: 2}
+    66.6% {z-index: 1}
+  }
+
+
+
+      /**Dark / Light theme Switch **/
+      html {
+        --bg: #1f1f1f; 
+        --color-text: hsl(0, 0%, 100%);
+        --sec-bg:#2a2a2a;
+        --sec-color:#838383;
+        --neu-box: -2px -2px 5px rgba(255,255,255,.08),2px 2px 5px rgba(0,0,0,.363);
+        --nav-shadow: 0 3px #1c1c1c;
+        --bottom-nav-hl:rgba(255, 255, 255, .08);
+     }
+      html[data-theme='dark'] {
+        --bg: #f1f1f1;
+        --color-text: #333;
+        --sec-bg:#e9e9e9;
+        --sec-color:#d8d8d8;
+        --neu-box:-2px -2px 5px white, 2px 2px 5px rgba(0, 0, 0, 0.15);
+        --nav-shadow: 0 3px #e8e8e883;
+        --bottom-nav-hl:rgba(255, 255, 255, 0.534);
+     }
+      .main {
+        background-color: var(--bg);
+     }
+
+
+    html.transition, html.transition *, html.transition *:before, html.transition *:after {
+      transition: all 750ms !important;
+      transition-delay: 0 !important;
+    }
+    

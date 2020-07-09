@@ -1,0 +1,91 @@
+.main {
+    height: 100vh;
+    align-items: center;
+  }
+
+  .card{
+    margin-top: 50px;
+    font-weight: bolder;
+    background-color: var(--sec-bg);
+    border-radius: 30px;
+    border-style: none;
+  }
+
+.card:hover{
+  box-shadow: var(--nav-shadow);
+
+}
+  @media screen and (max-width: 700px) {
+    .card{
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    
+
+  }
+
+  
+  .cardtext{
+    text-align: center;
+    letter-spacing: 5px;
+  }
+
+
+  .form-control{
+    background-color: var(--sec-bg);
+    border: 0;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    color: #aaa;
+  }
+
+  
+  .form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+  }
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: rgba(170, 170, 170, 0.450);
+
+  }  
+
+  .rounded-pill{
+    background-color: var(--sec-bg);
+  }
+
+  .tag{
+    background-color: var(--sec-bg);
+    border-radius: 15px;
+    text-align: center;
+    border: 0;
+    margin: 5px;
+    color: #aaa;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .tagtext{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+
+}
+.ripple:hover {
+  background: var(--sec-bg) radial-gradient(circle, transparent 1%, var(--sec-bg) 1%) center/15000%;
+}
+.ripple:active {
+  background-color: var(--bg);
+  background-size: 100%;
+  transition: background 0s;
+}

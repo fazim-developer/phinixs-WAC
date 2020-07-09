@@ -1,0 +1,84 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="main py-5">
+  
+  <div class="container py-5">
+
+  
+    <div class="p-1 rounded rounded-pill shadow-sm mb-4">
+      <div class="input-group">
+        <input style="border-radius: 15px;" type="search" id="myInput" (keyup)="searchApp()" placeholder=" Search for a app, game, etc." aria-describedby="button-addon1" class="form-control">
+        <div class="input-group-append">
+          <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+
+<div class="text-center">
+  <button class="tag filter_link ripple" type="submit" data-filter="app"><div class="tagtext">apps</div></button>
+  <button class="tag filter_link ripple" type="submit" data-filter="game"><div class="tagtext">games</div></button>
+  <button class="tag filter_link ripple" type="submit" data-filter="utilty"><div class="tagtext">utilities</div></button>
+  <button class="tag filter_link ripple" type="submit" data-filter="all"><div class="tagtext">all</div></button>
+</div>
+
+
+    <ul class="row pb-5 mb-4" style="list-style: none;padding: 0;" id="myUL">
+
+        <li class="col-lg-3 col-md-6 mb-4 mb-lg-0 tagelement app">
+            <!-- Card-->
+            <a [routerLink]="['/archive']" routerLinkActive="router-link-active" style="text-decoration: none;">
+            <div class="card">
+                <div class="card-body p-4"><img src="assets/images/folder.svg" alt="" class="img-fluid d-block mx-auto mb-3">
+                    <h5 class="cardtext">FILES</h5>
+                </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="col-lg-3 col-md-6 mb-4 mb-lg-0 tagelement app">
+          <!-- Card-->
+          <a [routerLink]="['/archive']" routerLinkActive="router-link-active" style="text-decoration: none;">
+          <div class="card">
+              <div class="card-body p-4"><img src="assets/images/chat.svg" alt="" class="img-fluid d-block mx-auto mb-3">
+                  <h5 class="cardtext">CHAT</h5>
+              </div>
+          </div>
+        </a>
+      </li>
+
+      <li class="col-lg-3 col-md-6 mb-4 mb-lg-0 tagelement app utilty">
+        <!-- Card-->
+        <a [routerLink]="['/password-generator']" routerLinkActive="router-link-active"  style="text-decoration: none;">
+        <div class="card">
+            <div class="card-body p-4"><img src="assets/images/pass.svg" alt="" class="img-fluid d-block mx-auto mb-3">
+                <h5 class="cardtext">PASS-GEN</h5>
+            </div>
+        </div>
+      </a>
+    </li>
+
+    <li class="col-lg-3 col-md-6 mb-4 mb-lg-0 tagelement app utilty">
+      <!-- Card-->
+      <a [routerLink]="['/calculator']" routerLinkActive="router-link-active" style="text-decoration: none;">
+      <div class="card">
+          <div class="card-body p-4"><img src="assets/images/calc.svg" alt="" class="img-fluid d-block mx-auto mb-3">
+              <h5 class="cardtext">CALC</h5>
+          </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="col-lg-3 col-md-6 mb-4 mb-lg-0 tagelement game">
+    <!-- Card-->
+    <a [routerLink]="['/the-cube']" routerLinkActive="router-link-active" style="text-decoration: none;">
+    <div class="card">
+        <div class="card-body p-4"><img src="assets/images/cube.svg" alt="" class="img-fluid d-block mx-auto mb-3">
+            <h5 class="cardtext">CUBE</h5>
+        </div>
+    </div>
+    </a>
+  </li>
+     
+</ul>
+</div>
+</div>
